@@ -26,6 +26,13 @@ namespace ASP.NetCoreMvcinteraction.Controllers
                 new Employee {Id=1,FirstName="zeynep",LastName="Erdem",CityId=6},
                 new Employee {Id=1,FirstName="ayşe",LastName="Erdem",CityId=34}
             };
+            List<string> cities = new List<string> { "İstanbul", "Ankara" };
+
+            var model = EmployeeListViewModel
+            {
+                Employees = employees,
+                Cities = cities
+            };
             return View(employees);
         }
     }
