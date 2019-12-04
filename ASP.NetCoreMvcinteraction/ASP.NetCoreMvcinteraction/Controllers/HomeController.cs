@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ASP.NetCoreMvcinteraction.Entities;
+using ASP.NetCoreMvcinteraction.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NetCoreMvcinteraction.Controllers
@@ -28,12 +29,16 @@ namespace ASP.NetCoreMvcinteraction.Controllers
             };
             List<string> cities = new List<string> { "İstanbul", "Ankara" };
 
-            var model = EmployeeListViewModel
-            {
-                Employees = employees,
-                Cities = cities
-            };
-            return View(employees);
+                var models= EmployeeListViewModel()
+                {
+                    Employees = employees,
+                    Cities = cities
+                };
+            return View(models;
+        }
+        public IActionResult Index4()
+        {
+
         }
     }
 }
