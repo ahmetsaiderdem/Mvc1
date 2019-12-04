@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASP.NetCoreMvcinteraction.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NetCoreMvcinteraction.Controllers
@@ -15,6 +16,17 @@ namespace ASP.NetCoreMvcinteraction.Controllers
         public ViewResult Index2()
         {
             return View();
+        }
+
+        public ViewResult Index3()
+        {
+            List<Employee> employees = new List<Employee>
+            {
+                new Employee {Id=1,FirstName="Ahmet",LastName="Erdem",CityId=6},
+                new Employee {Id=1,FirstName="zeynep",LastName="Erdem",CityId=6},
+                new Employee {Id=1,FirstName="ayşe",LastName="Erdem",CityId=34}
+            };
+            return View(employees);
         }
     }
 }
