@@ -12,6 +12,10 @@ namespace ASP.NetCoreMvcinteraction.Controllers
         {
             return "Hello from first application";
         }
+        public ViewResult Index2()
+        {
+            return View();
+        }
     }
 }
 
